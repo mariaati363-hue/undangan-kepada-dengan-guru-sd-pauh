@@ -397,7 +397,7 @@
             </div>
         </section>
 
-        <!-- Digital Gift / Amplop Digital Section -->
+<!-- Digital Gift / Amplop Digital Section -->
         <section class="py-16 px-6 bg-white border-t border-gold/10 text-center">
             <div class="mb-8">
                 <h2 class="font-serif-custom text-2xl font-bold text-charcoal">Hadiah Digital</h2>
@@ -405,19 +405,37 @@
                 <p class="mt-3 text-xs text-stone-600">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberi hadiah, Anda dapat mengirim melalui:</p>
             </div>
 
-            <div class="glass-card rounded-2xl p-6 shadow-md border border-gold/20 flex flex-col items-center text-center space-y-3">
-                <div class="w-full flex justify-center">
-                    <span id="bankName1Display" class="font-bold text-xl text-emerald-700 tracking-wider">BANK BSI</span>
+            <!-- Container Rekening Bank / E-Wallet -->
+            <div class="space-y-4">
+                <!-- Rekening 1 (BSI) -->
+                <div class="glass-card rounded-2xl p-6 shadow-md border border-gold/20 flex flex-col items-center text-center space-y-3">
+                    <div class="w-full flex justify-center">
+                        <span id="bankName1Display" class="font-bold text-xl text-emerald-700 tracking-wider">BANK BSI</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-stone-500 uppercase tracking-widest">Nomor Rekening</p>
+                        <p id="rekening1Display" class="font-serif-custom text-xl font-bold text-charcoal my-1 tracking-wider">7319975351</p>
+                        <p id="rekening1OwnerDisplay" class="text-xs text-stone-600">a.n Muhammad Nawawi</p>
+                    </div>
+                    <button onclick="copyToClipboard('rekening1Display', 'BSI')" class="w-full inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-900 text-white text-xs font-medium py-3 rounded-xl transition duration-300">
+                        <i class="far fa-copy"></i> Salin Nomor Rekening BSI
+                    </button>
                 </div>
-                <div>
-                    <p class="text-[10px] text-stone-500 uppercase tracking-widest">Nomor Rekening</p>
-                    <p id="rekening1Display" class="font-serif-custom text-xl font-bold text-charcoal my-1 tracking-wider">7319975351</p>
-                    <p id="rekening1OwnerDisplay" class="text-xs text-stone-600">a.n Muhammad Nawawi</p>
+
+                <!-- Rekening 2 (DANA) -->
+                <div class="glass-card rounded-2xl p-6 shadow-md border border-gold/20 flex flex-col items-center text-center space-y-3">
+                    <div class="w-full flex justify-center">
+                        <span id="bankName2Display" class="font-bold text-xl text-sky-600 tracking-wider">SEABANK</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-stone-500 uppercase tracking-widest">Nomor HP / Akun</p>
+                        <p id="rekening2Display" class="font-serif-custom text-xl font-bold text-charcoal my-1 tracking-wider">901252861540</p>
+                        <p id="rekening2OwnerDisplay" class="text-xs text-stone-600">a.n MARIATI</p>
+                    </div>
+                    <button onclick="copyToClipboard('rekening2Display', 'DANA')" class="w-full inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-900 text-white text-xs font-medium py-3 rounded-xl transition duration-300">
+                        <i class="far fa-copy"></i> Salin Nomor SEABANK
+                    </button>
                 </div>
-                <button onclick="copyToClipboard('rekening1Display', 'BSI')" class="w-full inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-900 text-white text-xs font-medium py-3 rounded-xl transition duration-300">
-                    <i class="far fa-copy"></i> Salin Nomor Rekening BSI
-                </button>
-            </div>
 
             <!-- Toast Notification -->
             <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-stone-800 text-white text-xs font-medium px-5 py-2.5 rounded-full shadow-2xl transition duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2">
